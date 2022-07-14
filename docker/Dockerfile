@@ -1,0 +1,6 @@
+FROM mysql:5.7.37
+
+ENV MYSQL_ROOT_PASSWORD rootpass
+ENV MYSQL_DATABASE kakeibo
+ENV MYSQL_USER higashi
+ENV MYSQL_PASSWORD testpass

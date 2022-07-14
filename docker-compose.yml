@@ -1,0 +1,15 @@
+version: "3.8"  
+services:
+  web:
+    image: adminer
+    ports:
+      - 8080:8080
+  db:
+    image: mysql:5.7.37
+    volumes:
+    - ./initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: kakeibo
+      MYSQL_USER: higashi
+      MYSQL_PASSWORD: testpass
